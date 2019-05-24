@@ -1,0 +1,564 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/ps06_96_Layer_2_DevTools.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="DocTitle" --><title>SQL Tools -- Function List</title><!-- InstanceEndEditable -->
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link href="/Templates/ps06.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<img src="/rt/Dingbats/H1_512.jpg" width="512" height="16" /><br />
+<img src="/rt/Dingbats/H2_104.jpg" width="24" height="104" /><img src="/rt/Company/Logos/PS/Logo_PS_96.gif" alt="Perfect Sync logo" width="96" height="96" /><img src="/rt/Company/Logos/PS/Text_PS_192.gif" alt="Perfect Sync" width="192" height="36" /><br />
+<img src="/rt/Dingbats/H3_48.jpg" width="24" height="48" /><!-- InstanceBeginEditable name="Header Image 96x48" --><img src="/rt/Dingbats/Headers/SQL_Tools_96.gif" alt="SQL Tools" width="96" height="48" /><!-- InstanceEndEditable --><br />
+<div id="main" style="margin: 0 auto; width:1000px;">
+<!-- InstanceBeginEditable name="Body" -->
+    <p align="center" class="PageHeader"> <img src="/rt/Dingbats/Divider.A.512.gif" width="512" height="8"  /></p>
+    <p align="center" class="PageHeader"><img src="/rt/DevTools/SQL_Tools.gif" width="119" height="32" /><br />
+    Database Functions </p>
+    <p align="center" class="PageHeader"><img src="/rt/Dingbats/Divider.Z.512.gif" width="512" height="8"  /></p>
+    <p align="left">Each SQL Tools function has been assigned to a &quot;family&quot;, to make it easier to find related functions. Each page of the <a href="/dl/SQLToolsPDF.pdf">SQL Tools Help File</a>'s Reference Guide lists the function's family, so you can easily look up related functions.</p>
+    <p align="left">(For information about all of the &quot;duplicate&quot; functions like <span class="Code">SQL_Initialize</span> and <span class="Code">SQL_Init</span> below, see <a href="#TwoOfEverything">Why Are There Two Of Everything?</a>)</p>
+    <div align="center">
+      <table border="0" cellspacing="6">
+        <tr>
+          <td width="150" align="left"><img src="/rt/Dingbats/GoldDotSeparator_8.gif" width="8" height="8" /> <a href="#Configuration">Configuration</a></td>
+          <td width="123" align="left"><img src="/rt/Dingbats/GoldDotSeparator_8.gif" width="8" height="8" /> <a href="#Environment">Environment</a></td>
+          <td width="121" align="left"><img src="/rt/Dingbats/GoldDotSeparator_8.gif" width="8" height="8" /> <a href="#Use">&quot;Use&quot; Functions</a></td>
+          <td width="117" align="left">&nbsp;</td>
+        </tr>
+        <tr>
+          <td align="left"><img src="/rt/Dingbats/GoldDotSeparator_8.gif" width="8" height="8" /> <a href="#DBOpen">Database Open/Close</a> </td>
+          <td align="left"><img src="/rt/Dingbats/GoldDotSeparator_8.gif" width="8" height="8" /> <a href="#DBInfo">Database Info/Attrib</a> </td>
+          <td align="left">&nbsp;</td>
+          <td align="left">&nbsp;</td>
+        </tr>
+        <tr>
+          <td align="left"><img src="/rt/Dingbats/GoldDotSeparator_8.gif" width="8" height="8" /> <a href="#TableInfo">Table Info </a></td>
+          <td align="left"><img src="/rt/Dingbats/GoldDotSeparator_8.gif" width="8" height="8" /> <a href="#TableColumn">Table Column Info</a> </td>
+          <td align="left">&nbsp;</td>
+          <td align="left">&nbsp;</td>
+        </tr>
+        <tr>
+          <td align="left"><img src="/rt/Dingbats/GoldDotSeparator_8.gif" width="8" height="8" /> <a href="#StatementOpen">Statement Open/Close</a> </td>
+          <td align="left"><img src="/rt/Dingbats/GoldDotSeparator_8.gif" width="8" height="8" /> <a href="#Statement">Statement</a> </td>
+          <td align="left"><img src="/rt/Dingbats/GoldDotSeparator_8.gif" width="8" height="8" /> <a href="#StatementInfo">Statement Info/Attrib</a></td>
+          <td align="left"><img src="/rt/Dingbats/GoldDotSeparator_8.gif" width="8" height="8" /> <a href="#StatementBinding">Statement Binding</a></td>
+        </tr>
+        <tr>
+          <td align="left"><img src="/rt/Dingbats/GoldDotSeparator_8.gif" width="8" height="8" /> <a href="#StoredProc">Stored Procedures</a></td>
+          <td align="left">&nbsp;</td>
+          <td align="left">&nbsp;</td>
+          <td align="left">&nbsp;</td>
+        </tr>
+        <tr>
+          <td align="left"><img src="/rt/Dingbats/GoldDotSeparator_8.gif" width="8" height="8" /> <a href="#ResultColumnBinding">Result Column Binding</a> </td>
+          <td align="left"><img src="/rt/Dingbats/GoldDotSeparator_8.gif" width="8" height="8" /> <a href="#ResultCount">Result Count</a></td>
+          <td align="left"><img src="/rt/Dingbats/GoldDotSeparator_8.gif" width="8" height="8" /> <a href="#ResultColumn">Result Columns</a></td>
+          <td align="left">&nbsp;</td>
+        </tr>
+        <tr>
+          <td align="left"><img src="/rt/Dingbats/GoldDotSeparator_8.gif" width="8" height="8" /> <a href="#ErrorTrace">Error/Trace</a></td>
+          <td align="left"><img src="/rt/Dingbats/GoldDotSeparator_8.gif" width="8" height="8" /> <a href="#Utility">Utility Family</a></td>
+          <td align="left"><img src="/rt/Dingbats/GoldDotSeparator_8.gif" width="8" height="8" /> <a href="#GetInfo">Get Info</a></td>
+          <td align="left"><img src="/rt/Dingbats/GoldDotSeparator_8.gif" width="8" height="8" /> <a href="#Handle">Handles</a></td>
+        </tr>
+      </table>
+    </div>
+    <p align="center">&nbsp;</p>
+    <p align="center"><a name="Configuration" id="Configuration"></a><img src="/rt/Dingbats/Divider.A.512.gif" width="512" height="8"  /></p>
+    <p class="TopicHeader1">Configuration Family</p>
+    <p>SQL Tools Initialization and Shutdown functions, plus functions that allow you to set and get various &quot;option&quot; values, which are used to configure SQL Tools.</p>
+    <blockquote>
+      <p>Program startup and shutdown:</p>
+      <blockquote>
+        <p class="Code">SQL_Initialize, SQL_Init<br />
+          SQL_Shutdown</p>
+      </blockquote>
+      <p>SQL Tools Options:</p>
+      <blockquote>
+        <p class="Code">SQL_OptionSInt, SQL_OptionStr<br />
+          SQL_SetOptionSInt, SQL_SetOptionStr<br />
+          SQL_OptionResetAll</p>
+      </blockquote>
+      <p>Info Export/Import</p>
+      <blockquote>
+        <p class="Highlight">SQL Tools Pro Only...</p>
+        <p class="Code">SQL_InfoExport<br />
+          SQL_InfoImport</p>
+      </blockquote>
+      <p>Thread startup and shutdown:</p>
+      <blockquote>
+        <p class="Highlight">SQL Tools Pro Only...</p>
+        <p><span class="Code">SQL_Thread</span></p>
+      </blockquote>
+      <p align="center" class="TopicHeader1"><a name="Environment" id="Environment"></a><img src="/rt/Dingbats/Divider.A.512.gif" width="512" height="8"  /></p>
+      <p class="TopicHeader1">Environment Family</p>
+    </blockquote>
+    <p>Functions for setting and getting attributes and information about the overall ODBC environment that your program operates in. These values include the ODBC version, the names of the various ODBC drivers and datasources that are available to your program, and information about things like &quot;connection pooling&quot;, which affect all of the databases in the environment.</p>
+    <blockquote>
+      <p>ODBC Environment Attributes:</p>
+      <blockquote>
+        <p class="Code">SQL_SetEnvironAttribSInt<br />
+          SQL_EnvironAttribSInt</p>
+      </blockquote>
+      <p>Available ODBC Drivers:</p>
+      <blockquote>
+        <p class="Highlight">SQL Tools Pro Only...</p>
+        <p class="Code">SQL_DriverCount<br />
+          SQL_DriverInfoStr<br />
+          SQL_DriverNumber</p>
+      </blockquote>
+      <p>Available ODBC Datasources:</p>
+      <blockquote>
+        <p class="Highlight">SQL Tools Pro Only... </p>
+        <p><span class="Code">SQL_DataSourceCount<br />
+          SQL_DataSourceInfoStr<br />
+          SQL_DataSourceNumber</span></p>
+        <p>&nbsp;</p>
+      </blockquote>
+    </blockquote>
+    <p class="TopicHeader1"><a name="Use" id="Use"></a><img src="/rt/Dingbats/Divider.A.512.gif" width="512" height="8"  /></p>
+    <p class="TopicHeader1">Use Family</p>
+    <p>Function that allow you to set and get the Current Database and Current Statement numbers, which are used by all of the SQL Tools abbreviated functions.</p>
+    <blockquote>
+      <blockquote>
+        <p class="Code">SQL_UseDB<br />
+          SQL_UseStmt<br />
+          SQL_UseDBStmt<br />
+          SQL_CurrentDB<br />
+          SQL_CurrentStmt      </p>
+      </blockquote>
+    </blockquote>
+    <p>&nbsp;</p>
+    <p class="TopicHeader1"><a name="DBOpen" id="DBOpen"></a><img src="/rt/Dingbats/Divider.A.512.gif" width="512" height="8"  /></p>
+    <p class="TopicHeader1">Database Open/Close Family</p>
+    <p>Functions related to the opening and closing of Databases.</p>
+    <blockquote>
+      <blockquote>
+        <p class="Code">SQL_NewDatabaseNumber, SQL_NewDBNumber<br />
+          SQL_OpenDatabase, SQL_OpenDB<br />
+          SQL_OpenDatabase1, SQL_OpenDatabase2<br />
+          SQL_DatabaseIsOpen, SQL_DBIsOpen<br />
+          SQL_CloseDatabase, SQL_CloseDB      </p>
+      </blockquote>
+    </blockquote>
+    <p>&nbsp;</p>
+    <p class="TopicHeader1"><a name="DBInfo" id="DBInfo"></a><img src="/rt/Dingbats/Divider.A.512.gif" width="512" height="8"  /></p>
+    <p class="TopicHeader1">Database Info/Attribute Family</p>
+    <p>Functions that allow you to obtain various Database Attribute and Information values, and to set Database Attribute values. (Generally speaking, SQL Tools &quot;Attribute&quot; settings can be changed, and &quot;Information&quot; settings cannot be changed.)</p>
+    <blockquote>
+      <p>General Database Information:</p>
+      <blockquote>
+        <p class="Code">SQL_DatabaseInfoStr, SQL_DBInfoStr<br />
+          SQL_DatabaseInfoUInt, SQL_DBInfoUInt</p>
+      </blockquote>
+      <p>Information about a database's basic ODBC capabilities:</p>
+      <blockquote>
+        <p class="Code">SQL_FunctionAvailable, SQL_FuncAvail</p>
+      </blockquote>
+      <p>Database Attributes:</p>
+      <blockquote>
+        <p class="Code">SQL_DatabaseAttribStr, SQL_DBAttribStr<br />
+          SQL_DatabaseAttribUInt, SQL_DBAttribUInt      </p>
+        <p>Most sub-function are limited to <span class="Highlight">SQL Tools Pro Only...</span></p>
+        <p class="Code">SQL_SetDatabaseAttribUInt, SQL_SetDBAttribUInt</p>
+        <p class="Highlight">SQL Tools Pro Only...</p>
+        <p class="Code">SQL_SetDatabaseAttribStr, SQL_SetDBAttribStr</p>
+      </blockquote>
+      <p>Information about the Data Types that are supported by a database:</p>
+      <blockquote>
+        <p class="Highlight">SQL Tools Pro Only...</p>
+        <p class="Code">SQL_DatabaseDataTypeCount, SQL_DBDataTypeCount<br />
+          SQL_DatabaseDataTypeInfoSInt, SQL_DBDataTypeInfoSInt<br />
+          SQL_DatabaseDataTypeInfoStr, SQL_DBDataTypeInfoStr<br />
+          SQL_DatabaseDataTypeNumber, SQL_DBDataTypeNumber</p>
+      </blockquote>
+      <p>Database Transaction Mode:</p>
+      <blockquote>
+        <p class="Highlight">SQL Tools Pro Only...</p>
+        <p class="Code">SQL_DatabaseAutoCommit, SQL_DBAutoCommit<br />
+        SQL_EndTransaction, SQL_EndTrans</p>
+      </blockquote>
+      <p>&nbsp;</p>
+    </blockquote>
+    <p class="TopicHeader1"><a name="TableInfo" id="TableInfo"></a><img src="/rt/Dingbats/Divider.A.512.gif" width="512" height="8"  /></p>
+    <p class="TopicHeader1">Table Info Family</p>
+    <p>Functions that allow you to obtain information about the tables in a database, such as the number of tables, their names, their Table Types, and any remarks that the table's creator included in the database.</p>
+    <blockquote>
+      <p>General Table Information:</p>
+      <blockquote>
+        <p class="Code">SQL_TableCount, SQL_TblCount<br />
+          SQL_TableInfoSInt, SQL_TblInfoSInt<br />
+          SQL_TableInfoStr, SQL_TblInfoStr<br />
+          SQL_TableNumber, SQL_TblNumber</p>
+      </blockquote>
+      <p>Table Statistics:</p>
+      <blockquote>
+        <p class="Highlight">SQL Tools Pro Only...</p>
+        <p class="Code">SQL_TableStatisticSInt, SQL_TblStatSInt</p>
+      </blockquote>
+      <p>Table Privileges:</p>
+      <blockquote>
+        <p class="Highlight">SQL Tools Pro Only...</p>
+        <p><span class="Code">SQL_TablePrivilegeCount, SQL_TblPrivCount</span><br />
+          <span class="Code">SQL_TablePrivilegeInfoStr, SQL_TblPrivInfoStr</span></p>
+        <p>&nbsp;</p>
+      </blockquote>
+    </blockquote>
+    <p class="TopicHeader1"><a name="TableColumn" id="TableColumn"></a><img src="/rt/Dingbats/Divider.A.512.gif" width="512" height="8"  /></p>
+    <p class="TopicHeader1">Table Column Info Family</p>
+    <p align="center"><span class="Tiny">(For functions related to<em> Result</em> Columns,<br /> 
+    see the Result Column family below.)</span></p>
+    <p>Functions that allow you to obtain information about the columns in a table, such as how many columns there are, their names and types, and whether or not they are nullable.</p>
+    <blockquote>
+      <p>General Table Column Information:</p>
+      <blockquote>
+        <p class="Code">SQL_TableColumnCount, SQL_TblColCount<br />
+          SQL_TableColumnInfoSInt, SQL_TblColInfoStr<br />
+          SQL_TableColumnInfoStr, SQL_TblColInfoSInt<br />
+          SQL_TableColumnNumber, SQL_TblColNumber</p>
+      </blockquote>
+      <p>Column Privileges:</p>
+      <blockquote>
+        <p class="Highlight">SQL Tools Pro Only...</p>
+        <p class="Code">SQL_ColumnPrivilegeCount, SQL_ColPrivCount<br />
+          SQL_ColumnPrivilegeInfoStr, SQL_ColPrivInfoStr</p>
+      </blockquote>
+      <p>Unique Columns:</p>
+      <blockquote>
+        <p class="Highlight">SQL Tools Pro Only...</p>
+        <p class="Code">SQL_UniqueColumnCount, SQL_UniqColCount<br />
+          SQL_UniqueColumnInfoStr, SQL_UniqColInfoStr<br />
+          SQL_UniqueColumnInfoSInt, SQL_UniqColInfoSInt</p>
+      </blockquote>
+      <p>AutoColumns:</p>
+      <blockquote>
+        <p class="Highlight">SQL Tools Pro Only...</p>
+        <p class="Code">SQL_AutoColumnCount, SQL_AutoColCount<br />
+          SQL_AutoColumnInfoStr, SQL_AutoColInfoStr<br />
+          SQL_AutoColumnInfoSInt, SQL_AutoColInfoSInt</p>
+      </blockquote>
+      <p>Columns which are indexed:</p>
+      <blockquote>
+        <p class="Highlight">SQL Tools Pro Only...</p>
+        <p class="Code">SQL_IndexCount, SQL_IndxCount<br />
+          SQL_IndexInfoStr, SQL_IndxInfoStr<br />
+          SQL_IndexInfoSInt, SQL_IndxInfoSInt</p>
+      </blockquote>
+      <p>Columns that are used as Primary Keys:</p>
+      <blockquote>
+        <p class="Highlight">SQL Tools Pro Only...</p>
+        <p class="Code">SQL_PrimaryKeyCount, SQL_PrimKeyCount<br />
+          SQL_PrimaryKeyInfoStr, SQL_PrimKeyInfoStr<br />
+          SQL_PrimaryKeyInfoSInt, SQL_PrimKeyInfoSInt</p>
+      </blockquote>
+      <p>Columns in other tables that are linked to this table:</p>
+      <blockquote>
+        <p class="Highlight">SQL Tools Pro Only...</p>
+        <p class="Code">SQL_ForeignKeyCount, SQL_FornKeyCount<br />
+          SQL_ForeignKeyInfoStr, SQL_FornKeyInfoStr<br />
+          SQL_ForeignKeyInfoSInt, SQL_FornKeyInfoSInt        </p>
+      </blockquote>
+      <p>&nbsp;</p>
+    </blockquote>
+    <p class="TopicHeader1"><a name="StatementOpen" id="StatementOpen"></a><img src="/rt/Dingbats/Divider.A.512.gif" width="512" height="8"  /></p>
+    <p class="TopicHeader1">Statement Open/Close Family</p>
+    <p>Functions related to the opening and closing of Statements. (SQL Tools handles most statement open/close operations automatically. These functions allow you to take control of the process, for special circumstances.)</p>
+    <blockquote>
+      <blockquote>
+        <p class="Code">SQL_NewStatementNumber, SQL_NewStmtNumber<br />
+          SQL_OpenStatement, SQL_OpenStmt<br />
+          SQL_StatementIsOpen, SQL_StmtIsOpen<br />
+          SQL_CloseStatement, SQL_CloseStmt        </p>
+      </blockquote>
+    </blockquote>
+    <p>&nbsp;</p>
+    <p class="TopicHeader1"><a name="Statement" id="Statement"></a><img src="/rt/Dingbats/Divider.A.512.gif" width="512" height="8"  /></p>
+    <p class="TopicHeader1">Statement Family</p>
+    <p>Functions related to SQL statements.</p>
+    <blockquote>
+      <blockquote>
+        <p class="Code">SQL_Statement, SQL_Stmt<br />
+          SQL_FetchResult, SQL_Fetch<br />
+          SQL_EndOfData, SQL_EOD</p>
+        <p class="Highlight">SQL Tools Pro Only...</p>
+        <p class="Code">SQL_AsyncStatement, SQL_AsyncStmt<br />
+          SQL_AsyncStatus<br />
+          SQL_FetchRelative, SQL_FetchRel<br />
+          SQL_Bookmark, SQL_Bkmk<br />
+          SQL_StatementCancel, SQL_StmtCancel<br />
+          SQL_MoreResults, SQL_MoreRes<br />
+          SQL_BulkOperation, SQL_BulkOp<br />
+          SQL_SetPosition, SQL_SetPos        </p>
+      </blockquote>
+      <p>&nbsp;</p>
+    </blockquote>
+    <p class="TopicHeader1"><a name="StatementInfo" id="StatementInfo"></a><img src="/rt/Dingbats/Divider.A.512.gif" width="512" height="8"  /></p>
+    <p class="TopicHeader1">Statement Info/Attrib Family</p>
+    <p>Functions that allow you to obtain SQL statement Attribute and Information values, and to set statement Attributes. (Generally speaking, SQL Tools &quot;Attribute&quot; settings can be changed, and &quot;Information&quot; settings cannot be changed.)</p>
+    <blockquote>
+      <p>General Information about a statement:</p>
+      <blockquote>
+        <p class="Code">SQL_StatementInfoStr, SQL_StmtInfoStr<br />
+          SQL_StatementNativeSyntax, SQL_StmtNativeSyntax</p>
+      </blockquote>
+      <p>Statement Attributes:</p>
+      <blockquote>
+        <p class="Code">SQL_StatementMode, SQL_StmtMode<br />
+          SQL_ResetStatementMode, SQL_ResetStmtMode<br />
+          SQL_StatementAttrib, SQL_StmtAttrib</p>
+      </blockquote>
+      <p>SQL Tools Pro Only...</p>
+      <blockquote>
+        <p class="Code">SQL_SetStatementAttrib, SQL_SetStmtAttrib</p>
+      </blockquote>
+      <p>Named Cursors:</p>
+      <blockquote>
+        <p class="Highlight">SQL Tools Pro Only...</p>
+        <p class="Code">SQL_NameCursor, SQL_NameCur<br />
+          SQL_CursorName, SQL_CurName        </p>
+      </blockquote>
+      <p>&nbsp;</p>
+    </blockquote>
+    <p class="TopicHeader1"><a name="StatementBinding" id="StatementBinding"></a><img src="/rt/Dingbats/Divider.A.512.gif" width="512" height="8"  /></p>
+    <p class="TopicHeader1">Statement Binding Family</p>
+    <p>Functions related to the Bound Parameters of SQL statements:</p>
+    <blockquote>
+      <blockquote>
+        <p class="Highlight">SQL Tools Pro Only...</p>
+        <p><span class="Code">SQL_StatementParameterCount, SQL_StmtParamCount<br />
+          SQL_ParameterInfoUInt, SQL_ParamInfoUInt<br />
+          SQL_BindParameter, SQL_BindParam<br />
+          SQL_NextParameter, SQL_NextParam<br />
+          SQL_LongParameter, SQL_LongParam</span></p>
+        <p>&nbsp;</p>
+      </blockquote>
+    </blockquote>
+    <p class="TopicHeader1"><a name="StoredProc" id="StoredProc"></a><img src="/rt/Dingbats/Divider.A.512.gif" width="512" height="8"  /></p>
+    <p class="TopicHeader1">Stored Procedure Family</p>
+    <p>Functions related to Stored Procedures, which are pre-compiled SQL Statements that are stored in a database:</p>
+    <blockquote>
+        <blockquote>
+          <p class="Highlight">SQL Tools Pro Only...</p>
+          <p class="Code">SQL_ProcedureCount, SQL_ProcCount<br />
+            SQL_ProcedureInfoStr, SQL_ProcInfoStr<br />
+            SQL_ProcedureInfoSInt, SQL_ProcInfoSInt</p>
+        </blockquote>
+        <p>Information about the parameters that a Procedure requires, and the result columns that it produces:</p>
+        <blockquote>
+          <p class="Highlight">SQL Tools Pro Only...</p>
+          <p><span class="Code">SQL_ProcedureColumnCount, SQL_ProcColCount<br />
+          SQL_ProcedureColumnInfoStr, SQL_ProcColInfoStr<br />
+          SQL_ProcedureColumnInfoSInt, SQL_ProcColInfoSInt</span></p>
+          <p>&nbsp;</p>
+        </blockquote>
+    </blockquote>
+    <p class="TopicHeader1"><a name="ResultColumnBinding" id="ResultColumnBinding"></a><img src="/rt/Dingbats/Divider.A.512.gif" width="512" height="8"  /></p>
+    <p class="TopicHeader1">Result Column Binding Family</p>
+    <p>Functions related to the binding of result columns. (This family is rarely used because of the SQL Tools &quot;Autobind&quot; function, which handles most binding operations.)</p>
+    <blockquote>
+      <blockquote>
+        <p class="Code">SQL_AutoBindColumn, SQL_AutoBindCol<br />
+          SQL_ManualBindColumn, SQL_ManualBindCol<br />
+          SQL_UnbindColumn, SQL_UnbindCol</p>
+        <p class="Highlight">SQL Tools Pro Only...</p>
+        <p><span class="Code">SQL_DirectBindColumn, SQL_DirectBindCol<br />
+          SQL_ResultColumnBufferPtr, SQL_ResColBufferPtr<br />
+          SQL_ResultColumnIndPtr, SQL_ResColIndPtr</span></p>
+      </blockquote>
+    </blockquote>
+    <p>&nbsp;</p>
+    <p class="TopicHeader1"><a name="ResultCount" id="ResultCount"></a><img src="/rt/Dingbats/Divider.A.512.gif" width="512" height="8"  /></p>
+    <p class="TopicHeader1">Result Count Family</p>
+    <p>Functions that provide general information about a statement's Result Set, such as the number of Rows and Columns in the set.</p>
+    <blockquote>
+      <blockquote>
+        <p class="Code">SQL_ResultRowCount, SQL_ResRowCount<br />
+          SQL_ResultColumnCount, SQL_ResColCount        </p>
+        <p>&nbsp;</p>
+      </blockquote>
+    </blockquote>
+    <p class="TopicHeader1"><a name="ResultColumn" id="ResultColumn"></a><img src="/rt/Dingbats/Divider.A.512.gif" width="512" height="8"  /></p>
+    <p class="TopicHeader1">Result Column Family</p>
+    <p>Functions that provide actual values (i.e. data) from the columns of a result set, provide information about a column's Indicator value, and provide information about the columns themselves (type, name, etc.).</p>
+    <blockquote>
+      <p>Result Column Values:</p>
+      <blockquote>
+        <p class="Code">SQL_ResultColumnSInt, SQL_ResColSInt<br />
+          SQL_ResultColumnUInt, SQL_ResColUInt<br />
+          SQL_ResultColumnBInt, SQL_ResColBInt<br />
+          SQL_ResultColumnFloat, SQL_ResColFloat<br />
+          SQL_ResultColumnStr, SQL_ResColStr<br />
+          SQL_ResultColumnText, SQL_ResColText<br />
+          SQL_LongResultColumn, SQL_LongResCol</p>
+      </blockquote>
+      <p>Information about Result Columns: </p>
+      <blockquote>
+        <p class="Code">SQL_ResultColumnInfoSInt, SQL_ResColInfoSInt<br />
+          SQL_ResultColumnInfoStr, SQL_ResColInfoStr<br />
+          SQL_ResultColumnType, SQL_ResColType<br />
+          SQL_ResultColumnSize, SQL_ResColSize<br />
+          SQL_ResultColumnLen, SQL_ResColLen<br />
+          SQL_ResultColumnNumber, SQL_ResColNumber</p>
+      </blockquote>
+      <p>Result Column Indicator values:</p>
+      <blockquote>
+        <p><span class="Code">SQL_ResultColumnNull, SQL_ResColNull<br />
+          SQL_ResultColumnMore, SQL_ResColMore<br />
+          SQL_ResultColumnInd, SQL_ResColInd</span></p>
+        <p>&nbsp;</p>
+      </blockquote>
+    </blockquote>
+    <p class="TopicHeader1"><a name="ErrorTrace" id="ErrorTrace"></a><img src="/rt/Dingbats/Divider.A.512.gif" width="512" height="8"  /></p>
+    <p class="TopicHeader1">Error/Trace Family</p>
+    <p>Various functions related to error handling and tracing.</p>
+    <blockquote>
+      <blockquote>
+        <p class="Code">SQL_Error<br />
+          SQL_ErrorClearOne<br />
+          SQL_ErrorClearAll<br />
+          SQL_ErrorColumnNumber<br />
+          SQL_ErrorDatabaseNumber<br />
+          SQL_ErrorCount<br />
+          SQL_ErrorFunction<br />
+          SQL_ErrorIgnore<br />
+          SQL_ErrorText<br />
+          SQL_ErrorNativeCode<br />
+          SQL_ErrorNumber<br />
+          SQL_ErrorQuickOne<br />
+          SQL_ErrorQuickAll<br />
+          SQL_ErrorSimulate<br />
+          SQL_ErrorStatementNumber<br />
+          SQL_ErrorTime<br />
+          SQL_State<br />
+          SQL_Trace<br />
+          SQL_TraceSInt, SQL_TraceStr</p>
+        <p class="Highlight">SQL Tools Pro Only...</p>
+        <p><span class="Code">SQL_ErrorStr<br />
+          SQL_Diagnostic<br />
+          SQL_AsyncErrors<br />
+          SQL_OnErrorCall</span></p>
+        <p>&nbsp;</p>
+      </blockquote>
+    </blockquote>
+    <p class="TopicHeader1"><a name="Utility" id="Utility"></a><img src="/rt/Dingbats/Divider.A.512.gif" width="512" height="8"  /></p>
+    <p class="TopicHeader1">Utility Family</p>
+    <p>Various utility functions, such as text-to-binary and binary-to-text conversions, a &quot;string interpreter&quot; that simplifies the use of certain characters in strings (such as quotation marks), and a simple Message Box function.</p>
+    <blockquote>
+      <blockquote>
+        <p class="Code">SQL_Binary<br />
+          SQL_Text<br />
+          SQL_TextDateTime<br />
+          SQL_TextDate<br />
+          SQL_TextTime<br />
+          SQL_MsgBox<br />
+          SQL_MsgBoxButton<br />
+          SQL_IString<br />
+          SQL_LimitTextLength<br />
+          SQL_Okay<br />
+          SQL_SelectFile<br />
+          SQL_ToolsVersion        </p>
+      </blockquote>
+    </blockquote>
+    <p>&nbsp;</p>
+    <p class="TopicHeader1"><a name="GetInfo" id="GetInfo"></a><img src="/rt/Dingbats/Divider.A.512.gif" width="512" height="8"  /></p>
+    <p class="TopicHeader1">Get Info Family</p>
+    <p>SQL Tools Internal &quot;Get&quot; Functions. These functions are rarely used in programs because SQL Tools automatically uses these functions (internally) whenever an Info function is used. When an Info function is first used, SQL Tools caches all of the information that is related to the function, for faster access in the future. The Get functions can be used to force SQL Tools to &quot;refresh&quot; the Info data, if you have reason to believe that, while your program is running, a table has been added, a column has been deleted, etc.</p>
+    <blockquote>
+      <blockquote>
+        <p class="Code">SQL_GetTblCols, SQL_GetTableColumns<br />
+          SQL_GetTblInfo, SQL_GetTableInfo</p>
+        <p class="Highlight">SQL Tools Pro Only...</p>
+        <p><span class="Code">SQL_GetDataSources, SQL_GetDrivers<br />
+          SQL_GetAutoCols, SQL_GetAutoColumns<br />
+          SQL_GetColPrivs, SQL_GetColumnPrivileges<br />
+          SQL_GetDBDataTypes, SQL_GetDatabaseDataTypes<br />
+          SQL_GetFornKeys, SQL_GetForeignKeys<br />
+          SQL_GetIndxes, SQL_GetIndexes<br />
+          SQL_GetPrimKeys, SQL_GetPrimaryKeys<br />
+          SQL_GetProcCols, SQL_GetProcedureColumns<br />
+          SQL_GetProcs, SQL_GetProcedures<br />
+          SQL_GetTblPrivs, SQL_GetTablePrivileges<br />
+          SQL_GetUniqCols, SQL_GetUniqueColumns</span></p>
+      </blockquote>
+    </blockquote>
+    <p>&nbsp;</p>
+    <p class="TopicHeader1"><a name="Handle" id="Handle"></a><img src="/rt/Dingbats/Divider.A.512.gif" width="512" height="8"  /></p>
+    <p class="TopicHeader1">Handle Family</p>
+    <p>These functions can be used to obtain certain window handles, plus the actual ODBC handles of the ODBC Environment, each ODBC database connection, and each ODBC statement.</p>
+    <blockquote>
+      <blockquote>
+        <p class="Code">SQL_hParentWindow</p>
+        <p class="Highlight">SQL Tools Pro Only...</p>
+        <p>It should not be necessary to use these functions unless you wish to write API-level functions that SQL Tools does not provide. (Of which there are very, very few.):</p>
+        <p class="Code">SQL_hDatabase, SQL_hDB<br />
+          SQL_hStatement, SQL_hStmt<br />
+          SQL_hEnvironment</p>
+      </blockquote>
+    </blockquote>
+    <p align="center"><span class="PageHeader"><a name="TwoOfEverything" id="TwoOfEverything"></a></span><img src="/rt/Dingbats/Divider.A.512.gif" width="512" height="8"  /></p>
+    <p class="TopicHeader1">Why Are There Two Of Everything? </p>
+    <p>When you look at the list of SQL Tools functions, you will probably notice that there are two of just about everything. Here&rsquo;s why&hellip;</p>
+    <p>SQL Tools is capable of handling extremely complex programs. In fact, SQL Tools Pro could theoretically be used to write a program that uses 256 different databases at the same time, and where each database has 256 SQL statements that are active, all at the same time. (A much more likely scenario would be a program that uses several databases with one active statement at a time, or one database with several active statements, but anything is possible.)</p>
+    <p>But <em>most</em> of the time, <em>most</em> programs will use a single database and a single statement at a time.</p>
+    <p>Here is an example of &quot;two of everything&quot;&hellip;</p>
+    <p>One of the most commonly used SQL Tools functions is called <span class="Code">SQL_Statement</span>. It is used to execute SQL statements, to tell a database what to do. To use the <span class="Code">SQL_Statement</span> function, you need to specify a Database Number (from 1-256), a Statement Number (from 1-256), a parameter like <span class="Code">PREPARE</span> or <span class="Code">EXECUTE</span>, and a string that contains the SQL statement.</p>
+    <p>Since most of the time you will be dealing with Database #1 and Statement #1, it can be very tedious to type 1,1 at the beginning of every single function's parameter list, so SQL Tools provides a complete set of &quot;abbreviated&quot; functions that use default values for the database number and statement number.</p>
+    <p>If a function name contains the word <span class="Code">&quot;Database&quot;, &quot;Statement&quot;, 'Table&quot;, &quot;Column&quot;, </span>or<span class="Code"> &quot;Result</span>&quot; it is a verbose function that requires you to specify a Database number and/or a Statement Number.</p>
+    <p>On the other hand, if a function name contains the abbreviation <span class="Code">&quot;DB&quot;, &quot;Stmt&quot;, &quot;Tbl&quot;, &quot;Col&quot;, </span>or<span class="Code"> &quot;Res&quot;</span> it is an abbreviated function that does not allow the Database Number and Statement Number to be specified as parameters. (Please note that certain words like &quot;Info&quot; are never spelled out in function names and do not indicate an abbreviated function.)</p>
+    <p>Here is a specific example of a verbose function&hellip; </p>
+    <blockquote>
+      <p><span class="Code">SQL_Statement 1, 1, EXECUTE, &quot;SELECT * FROM MYTABLE&quot; </span></p>
+    </blockquote>
+    <p>And here is the abbreviated function that would perform precisely the same operation&hellip; </p>
+    <blockquote>
+      <p class="Code">SQL_Stmt EXECUTE, &quot;SELECT * FROM MYTABLE&quot; </p>
+    </blockquote>
+    <p> The <span class="Code">SQL_Statement</span> and <span class="Code">SQL_Stmt</span> functions are called &quot;twins&quot; and they share a page in the documentation. </p>
+    <p>If you are writing a program that uses one database at a time, with one statement at a time, we recommend that you use the abbreviated functions. It will save you a lot of typing, and help reduce errors.</p>
+    <p>If you are writing a more complex program, you have a choice: </p>
+    <blockquote>
+      <p><img src="/rt/Dingbats/GoldBullet_1_16.gif" width="16" height="16" /> <span class="Medium">Use the verbose functions for everything, </span></p>
+      <blockquote>
+        <p>Use the SQL_UseDB and SQL_UseStmt functions to specify which database and statement you want the abbreviated functions to handle.          </p>
+        <p>For example, a program could use Database 1, Statement 3 followed by Database 2, Statement 9 in this way&hellip; </p>
+        <p class="Code">SQL_Statement 1,3, EXECUTE, &quot;SELECT * FROM MYTABLE&quot;</p>
+        <p><span class="Code">SQL_Statement 2,9, EXECUTE, &quot;SELECT * FROM YOURTABLE&quot; </span></p>
+        <p><em>&hellip;or...</em></p>
+      </blockquote>
+      <p><img src="/rt/Dingbats/GoldBullet_2_16.gif" width="16" height="16" /> <span class="Medium">Use the abbreviated functions and the &quot;Use&quot; functions like this&hellip;</span> </p>
+      <blockquote>
+        <p class="Code">SQL_UseDB 1<br />
+          SQL_UseStmt 3<br />
+          SQL_Stmt EXECUTE, &quot;SELECT * FROM MYTABLE&quot;</p>
+        <p><span class="Code">SQL_UseDB 2<br />
+          SQL_UseStmt 9<br />
+          SQL_Stmt EXECUTE, &quot;SELECT * FROM YOURTABLE&quot;</span></p>
+        <p> If you often switch the default Database number and Statement number at the same time, you can also use this function&hellip; </p>
+        <p class="Code">SQL_UseDBStmt 2,9 </p>
+        <p> &hellip;to change both at once.</p>
+        <p>The advantage of using the SQL_Use functions is that they are &quot;sticky&quot;. In other words, once you use SQL_UseDB 2, all of the abbreviated functions will continue to use Database 2 until you use SQL_UseDB again to change the default. In that way, you can use the SQL_Use functions to specify a database or statement, and then perform a large number of abbreviated functions.</p>
+      </blockquote>
+    </blockquote>
+    <p>It is also possible to mix the verbose and abbreviated functions. For example if a program did 90% of its work with one database and 10% with a handful of others, you could use the abbreviated functions to handle Database 1, Statement 1, and use the verbose functions for the other 10%. The use of verbose functions does not affect the use of the SQL Use functions.</p>
+    <p>&nbsp;</p>
+    <p align="center" class="Medium"><a href="/pp/DevTools/SQLTools/SQLTools.php">Return to SQL Tools Main Page </a></p>
+  <!-- InstanceEndEditable -->
+</div>
+<p align="right"><img src="/rt/Company/Logos/PS/Logo_PS_32.gif" alt="Perfect Sync logo" width="32" height="32" /><img src="/rt/Dingbats/H8_64.jpg" width="24" height="64" /><br />
+<img src="/rt/Dingbats/H9_512.jpg" width="512" height="24" /><br />
+<span class="Updated"><!-- InstanceBeginEditable name="LastEdited" --> UPDATED 30 JUL 2017<!-- InstanceEndEditable -->&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+</p>
+<p align="center"><span class="Tiny"><img src="/rt/Dingbats/Divider.A.512.gif" width="512" height="8"  /><br />
+  <br />
+   <a href="/pp/Company/AboutUs.php">About Us</a>
+  <img src="/rt/Dingbats/Dot.Red.8.gif" width="8" height="8" />&nbsp;<a href="/pp/Company/ContactUs.php">Contact Us</a>
+  <img src="/rt/Dingbats/Dot.Red.8.gif" width="8" height="8" />&nbsp;<a href="/pp/Company/MarksAndIP.php">Legal Stuff</a>
+  <img src="/rt/Dingbats/Dot.Red.8.gif" width="8" height="8" />&nbsp;<a href="/index.html">Main Page</a>
+  <br />
+  &copy; Copyright <!-- InstanceBeginEditable name="CopyrightYear" -->2001<!-- InstanceEndEditable -->-2017 Perfect Sync, Inc.  
+All rights reserved<br />
+<br /><img src="/rt/Dingbats/Divider.Z.512.gif" width="512" height="8"  /></span></p>
+<p align="center"><br />
+</body>
+<!-- InstanceEnd --></html>

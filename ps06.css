@@ -1,0 +1,119 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+	text-align: left;
+}
+
+.Tiny {
+	font-size: x-small;
+}
+
+.Medium {
+	font-size: medium;
+}
+
+.Disabled {
+	color: #CCCCCC;
+}
+
+.Editorial {
+	color: #008800;
+}
+
+.Highlight {
+	color: #008800;
+}
+
+.Code {
+	font-family: "Courier New", Courier, monospace;
+	font-size: medium;
+}
+
+.CodeRemark {
+	font-family: "Courier New", Courier, monospace;
+	font-size: medium;
+	color: #008800;
+}
+
+.Updated {
+	font-size: x-small;
+	color: #CCCCCC;
+}
+
+.Dingbats{
+	color: #CC0000;
+}
+
+.ULine {
+	text-decoration: underline;
+}
+
+.PageHeader {
+	font-size: x-large;
+	font-weight: bold;
+	color: #BB0000;
+	text-align: center;
+}
+.UrgentPageHeader {
+	font-size: large;
+	font-weight: bold;
+	color: #990000;
+	text-align: center;
+}
+
+.TopicHeader1 {
+	font-size: medium;
+	font-weight: bold;
+	color: #CC0000;
+	text-align: center;
+}
+.ParagraphHeader {
+	font-size: medium;
+	font-weight: bold;
+	color: #990000;
+}
+.SmallPrint {
+	font-size: xx-small;
+	text-transform: uppercase;
+}
+.tborder {
+	background: #D0D0D0;
+	color: #000000;
+	border: 0px solid #000000;
+}
+.GBxH000 a:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.GBxH000 a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.GBxH000 a:hover {
+	color: #FFFF00;
+	text-decoration: underline;
+}
+.GBxH030 a:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.GBxH030 a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.GBxH030 a:hover {
+	color: #FFFF00;
+	text-decoration: underline;
+}
+.GBxH045 a:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.GBxH045 a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.GBxH045 a:hover {
+	color: #FFFF00;
+	text-decoration: underline;
+}

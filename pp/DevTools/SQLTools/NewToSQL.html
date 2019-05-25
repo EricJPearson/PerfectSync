@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/ps06_96_Layer_2_DevTools.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="DocTitle" --><title>New to SQL?</title>
+<style type="text/css">
+<!--
+.style1 {color: #008000}
+-->
+</style>
+<!-- InstanceEndEditable -->
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link href="/ps06.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<img src="/rt/Dingbats/H1_512.jpg" width="512" height="16" /><br />
+<img src="/rt/Dingbats/H2_104.jpg" width="24" height="104" /><img src="/rt/Company/Logos/PS/Logo_PS_96.gif" alt="Perfect Sync logo" width="96" height="96" /><img src="/rt/Company/Logos/PS/Text_PS_192.gif" alt="Perfect Sync" width="192" height="36" /><br />
+<img src="/rt/Dingbats/H3_48.jpg" width="24" height="48" /><!-- InstanceBeginEditable name="Header Image 96x48" --><img src="/rt/Dingbats/Headers/SQL_Tools_96.gif" alt="SQL Tools" width="96" height="48" /><!-- InstanceEndEditable --><br />
+<div id="main" style="margin: 0 auto; width:1000px;">
+<!-- InstanceBeginEditable name="Body" -->
+    <p align="center" class="PageHeader"><img src="/rt/Dingbats/Divider.A.512.gif" width="512" height="8"  /></p>
+    <p align="center" class="PageHeader">      What is SQL, and What Will It Do For My Programs?</p>
+    <p align="center" class="PageHeader"><img src="/rt/Dingbats/Divider.Z.512.gif" width="512" height="8"  /></p>
+    <p align="left"> If you've never used a Relational Database before, SQL (Standard Query Language) will blow you away. Imagine being able to construct a &quot;sentence&quot; &ndash; in a language that is close to Plain English &ndash; that tells a database to do something like this: </p>
+    <p>&quot;Give me all of the records in my AddressBook database where the person lives in California, the age of the person is greater than 18, and the Phone Number is not blank. Show me just the First Name, Last Name, City, and Phone Number fields, and sort the records in ascending order by Zip Code.&quot; </p>
+<p>      Here is the &quot;SQL Statement&quot; for that request:</p>
+<span class="Code style1">SELECT FirstName, LastName, City, PhoneNumber<br />
+FROM AddressBook<br />
+WHERE State='California' AND Age&gt;18 AND PhoneNumber&lt;&gt;''<br />
+ORDER BY ZipCode</span>
+<p>The database does the rest! </p>
+<p>You simply submit that request, and start reading data. You don&rsquo;t have to worry about the file format, indexes, linked lists, lookup tables, binary trees... or anything else. </p>
+<p><em>The database does all of the work for you!</em></p>
+<p>And that <em>same</em> request will work for any SQL-compatible database, whether it's Microsoft Access, SQL Server, MySQL, Oracle, Btrieve, dBase, Excel, Paradox, FoxPro... drivers are available for more than 75 of the world's most popular database formats, and toolkits are available for writing custom drivers.  You can even write one program that opens two or more <em>different</em> database formats, so making a program that is scalable from Access up to SQL Server (for example) is a snap!</p>
+    <p>It doesn't stop there!  SQL databases are <em>Relational</em> Databases.  Imagine that you're creating a database to store orders for your company's products.  You could create a SQL table (a grid-like structure) called Orders, with a CustomerNumber column, a QuantityOrdered Column, and a ProductNumber column.  Then you could create a table called Customers that contains a CustomerNumber column, a CustomerName column, and a CustomerAddress column.  Finally, you could create a table called Products, with columns called ProductNumber, ProductName, and Product Price.   The beauty of a system like this is that when data is added to the database, each unique value is only stored once.  Even if 10,000 different customers order your &quot;Acme Industries Super-Widget 2000&quot; product, that string will only be stored in the database once. The product <em>number</em> will be stored 10,000 times, and the database will automatically look up the product name for you whenever you use the database.  </p>
+    <p>Another example: if your best customer places 100,000 orders, their address will still only take up <em>one</em> cell in the database. </p>
+    <p>And again, the database itself does all of the work!</p>
+    <p>SQL databases are also Multi-User.  Twenty different people can be entering orders at the same time that somebody else is running a Sales Report, and somebody else is entering new product descriptions. </p>
+    <p>Finally, SQL databases are popular!  That means that your program can use databases produced by virtually any modern DBMS program.  And even more importantly, databases that are created by your program can be used by other programs.  For example... Need a powerful Report Generator module for your SQL Tools application?  Pick up a copy of  Crystal Reports, or one of the other popular products that all work with SQL databases!</p>
+    <p>SQL is a <em>complete</em> database management language, with commands like SELECT, UPDATE, DELETE, INSERT ... and on and on. It contains dozens of built-in functions for building powerful, sophisticated database requests.</p>
+    <p>And with SQL Tools, SQL can become a sub-language of BASIC! Simply link SQL Tools into your program, and you can start using SQL as if it was part of the BASIC language!</p>
+    <p align="center"><a href="/pp/DevTools/SQLTools/SQLTools.html">Return to SQL Tools Main Page</a></p>
+    <!-- InstanceEndEditable -->
+</div>
+<p align="right"><img src="/rt/Company/Logos/PS/Logo_PS_32.gif" alt="Perfect Sync logo" width="32" height="32" /><img src="/rt/Dingbats/H8_64.jpg" width="24" height="64" /><br />
+<img src="/rt/Dingbats/H9_512.jpg" width="512" height="24" /><br />
+<span class="Updated"><!-- InstanceBeginEditable name="LastEdited" --> UPDATED 30 JUL 2017<!-- InstanceEndEditable -->&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+</p>
+<p align="center"><span class="Tiny"><img src="/rt/Dingbats/Divider.A.512.gif" width="512" height="8"  /><br />
+  <br />
+   <a href="/pp/Company/AboutUs.html">About Us</a>
+  <img src="/rt/Dingbats/Dot.Red.8.gif" width="8" height="8" />&nbsp;<a href="/pp/Company/ContactUs.html">Contact Us</a>
+  <img src="/rt/Dingbats/Dot.Red.8.gif" width="8" height="8" />&nbsp;<a href="/pp/Company/MarksAndIP.html">Legal Stuff</a>
+  <img src="/rt/Dingbats/Dot.Red.8.gif" width="8" height="8" />&nbsp;<a href="/index.html">Main Page</a>
+  <br />
+  &copy; Copyright <!-- InstanceBeginEditable name="CopyrightYear" -->2006<!-- InstanceEndEditable -->-2017 Perfect Sync, Inc.  
+All rights reserved<br />
+<br /><img src="/rt/Dingbats/Divider.Z.512.gif" width="512" height="8"  /></span></p>
+<p align="center"><br />
+</body>
+<!-- InstanceEnd --></html>
